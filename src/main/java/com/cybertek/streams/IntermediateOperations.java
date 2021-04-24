@@ -19,7 +19,7 @@ public class IntermediateOperations {
         Stream<String> strStream = Arrays.asList("Apple","Orange","Kiwi","Banana", "Apple","Cheery","Mango").stream();
         System.out.println(strStream.filter(str -> str.length() == 5).count());
 
-        //System.out.println(strStream.filter(str -> str.startsWith("A")).count()); //ERROR
+        //System.out.println(strStream.filter(str -> str.startsWith("A")).count()); // We will have error here since we already terminated our stream in above line with count() terminal operation.
 
         Arrays.asList("Apple","Orange","Kiwi","Banana", "Apple","Cheery","Mango").stream().filter(str -> str.equals("Apple")).forEach(str -> System.out.println(str));
 
